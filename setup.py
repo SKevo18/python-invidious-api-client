@@ -6,7 +6,7 @@ sys.path.append('.')
 import setuptools
 
 
-__description__ = "Python Project Template" # FIXME
+__description__ = "Invidious API Client"
 __author__      = "SKevo"
 __copyright__   = "Copyright (c) 2021, SKevo"
 __credits__     = ["SKevo"]
@@ -31,7 +31,7 @@ __doc__ = __readme__
 
 
 setuptools.setup(
-    name = 'python_project_template', # FIXME
+    name = 'invidious_api_client',
     packages = setuptools.find_packages(exclude=('tests',)),
 
     long_description=__readme__,
@@ -40,14 +40,16 @@ setuptools.setup(
     version = __version__,
     license = __license__,
     description = __description__,
-    keywords = [], # FIXME
+    keywords = ["invidious", "API", "client", "python"],
 
     author = __author__,
     author_email = __email__,
 
-    url = 'https://github.com/CWKevo/python-project-template', # FIXME
+    url = 'https://github.com/CWKevo/python-invidious-api-client',
 
-    install_requires=[], # FIXME
+    install_requires=[
+        "requests"
+    ],
 
     classifiers=[
         f'Development Status :: {__status__}',

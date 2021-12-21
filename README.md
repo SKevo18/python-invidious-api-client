@@ -15,17 +15,6 @@ A template for new Python projects.
 
 (*Approx. time to set up:* 15 - 25 minutes)
 
-- [ ] Edit `# FIXME` lines to match your project;
-  - [ ] setup.py
-    - [ ] Package name
-    - [ ] License
-    - [ ] Version
-    - [ ] Author
-    - [ ] Author email
-    - [ ] Description
-    - [ ] Keywords
-    - [ ] Classifiers
-    - [ ] Repository URL
 - [ ] Setup virtualenv (`scripts/setup_virtualenv_windows.ps1` for Windows);
 - [ ] Rename `python_project_template` folder and start writing your source code;
 - [ ] Add your dependencies to `requirements.txt`;
