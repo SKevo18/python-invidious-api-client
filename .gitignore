@@ -1,5 +1,4 @@
-# TODO: Your editor's folder
-# .vscode/
+.vscode/
 __pycache__/
 env/
 
