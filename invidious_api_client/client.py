@@ -119,7 +119,7 @@ class InvidiousClient:
             (from [https://regex101.com/r/OY96XI/1](https://regex101.com/r/OY96XI/1))
         """
 
-        return self._get_json(f"videos/{id}", YoutubeVideo, **requests_kwargs)
+        return self._get_json(f"videos/{id}", return_class=YoutubeVideo, **requests_kwargs)
 
 
     def get_comments(self, video: t.Union[str, YoutubeVideo], **requests_kwargs) -> Comments:
