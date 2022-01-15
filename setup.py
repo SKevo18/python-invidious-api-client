@@ -31,7 +31,7 @@ __doc__ = __readme__
 
 
 setuptools.setup(
-    name = 'invidious_api_client',
+    name = 'invidious-api-client',
     packages = setuptools.find_packages(exclude=('tests',)),
 
     long_description=__readme__,
@@ -40,7 +40,7 @@ setuptools.setup(
     version = __version__,
     license = __license__,
     description = __description__,
-    keywords = ["invidious", "API", "client", "python"],
+    keywords = ["Invidious", "API", "client", "python"],
 
     author = __author__,
     author_email = __email__,

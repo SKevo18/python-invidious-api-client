@@ -3,6 +3,8 @@ import typing as t
 import requests
 
 from datetime import datetime
+from functools import lru_cache
+
 from invidious_api_client.models import BaseInvidiousData
 
 
@@ -375,16 +377,29 @@ def get_instances(*args, **kwargs) -> InstancesList:
 
 
 
-def choose_instance(no_onions: bool=True) -> Instance:
+@lru_cache(maxsize=3)
+def choose_instance(prefer_country_codes: t.Optional[t.List[str]]=None, no_onions: bool=True, only_accessible: bool=True) -> Instance:
     """
         Chooses the first instance in the API to use.
 
+        ### Warning:
+
+        Not all instances allow access to their API!
+
         ### Parameters:
         - `no_onions` - If `True`, Tor instances will be excluded.
+        - `prefer_country_codes` - A list of country codes to prefer (for lower ping). Common ones: `['NL', 'DE']`, `['US']`
+        - `only_accessible` - If `True`, only instances with accessible API will be returned.
     """
 
     for instance in get_instances(params={'sort_by': 'health'}).instances:
-        if instance.type == 'onion' and no_onions:
+        if only_accessible and requests.head(f"{instance.uri.strip('/')}/api/v1/videos/dQw4w9WgXcQ").status_code != 200:
             continue
+
+        if no_onions and instance.type == 'onion':
+            continue
+
+        if (prefer_country_codes is not None) and (instance.region is not None) and (instance.region.lower() in prefer_country_codes):
+            return instance
 
         return instance
