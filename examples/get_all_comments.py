@@ -2,7 +2,8 @@
     Current, the length of comment continuation token increases over time to the point
     where the request is aborted with `414 Request-URI Too Large` error.
 
-    This might be a bug in the API, or a Google bug. 
+    This might be a bug in the API, or a Google bug. Either way or not, mass scraping of comments seems
+    impossible right now. If you know a workaround, please open an issue/PR.
 """
 
 try:
