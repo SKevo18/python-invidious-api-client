@@ -2,6 +2,8 @@
 
 A client for [Invidious'](https://invidious.io/) JSON API. No Google API key is required.
 
+Under minimal maintenance. Please, also see my [Piped API client](https://github.com/CWKevo/python-piped-api-client) for a maintained alternative.
+
 ## Installation
 
 ```bash
@@ -28,7 +30,7 @@ But then again, being blocked is on responsibility of the instance admins. In ot
 Some instances probably use proxies to hide their IP address from Google, therefore their API access isn't limited and they can handle many connections in a
 shorter period of time more than the ones that are at the risk of being blocked by Google.
 
-I support the idea of every website with public content having an easy-to-access REST API, which YouTube doesn't. This project was made for people that want a cheap and quick way to access Google's API anonymously, without having to worry about all the API keys and paywall nonsense.
+I support the idea of every website with public content having an easy-to-access REST API. This project was made for people that want a cheap and quick way to access Google's API anonymously, without having to worry about all the API keys and other walls.
 
 ## 🎁 Support me
 
