@@ -32,7 +32,4 @@ shorter period of time more than the ones that are at the risk of being blocked 
 
 I support the idea of every website with public content having an easy-to-access REST API. This project was made for people that want a cheap and quick way to access Google's API anonymously, without having to worry about all the API keys and other walls.
 
-## 🎁 Support me
-
-I create free software to benefit people.
-If this project helps you and you like it, consider supporting me by donating via [PayPal](https://www.paypal.com/donate/?hosted_button_id=XDUWS5K6947HY).
+<a href="https://www.buymeacoffee.com/skevo"><img src="https://img.buymeacoffee.com/button-api/?text=Support me&emoji=🐣&slug=skevo&button_colour=ffa200&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a>
